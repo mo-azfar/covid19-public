@@ -3,6 +3,7 @@
 ###### Purposely build for displaying data over [Metabase](https://www.metabase.com/)
 
 - :heavy_check_mark: cases_malaysia
+- :heavy_check_mark: cases_state
 
 
 [![Capture.png](https://i.postimg.cc/mZ7xdmyL/Capture.png)](https://postimg.cc/MXZrHbLN)
