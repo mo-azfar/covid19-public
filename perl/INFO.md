@@ -1,4 +1,4 @@
 # PERL - CSV TO MYSQL
 
-- [x] cases_malaysia
+- :heavy_check_mark: cases_malaysia
 
