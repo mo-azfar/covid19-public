@@ -42,8 +42,10 @@ my $sql = "INSERT INTO cases_state (id, date, state, cases_new )
 			
 my $statement = $dbh->prepare($sql);
 
+$row->[2] =~ s/\D+//g;
+
 # execute your SQL statement
-$statement->execute($id, $row->[0], $row->[1], $row->[2]) or die $DBI::errstr;
+$statement->execute($id, $row->[0], $row->[1], $row->[2] || 0) or die $DBI::errstr;
 $statement->finish();
 
 }

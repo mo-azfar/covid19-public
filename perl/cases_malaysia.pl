@@ -45,8 +45,17 @@ my $sql = "INSERT INTO cases_malaysia  (date, cases_new, cluster_import, cluster
 
 my $statement = $dbh->prepare($sql);
 
+$row->[1] =~ s/\D+//g;
+$row->[2] =~ s/\D+//g;
+$row->[3] =~ s/\D+//g;
+$row->[4] =~ s/\D+//g;
+$row->[5] =~ s/\D+//g;
+$row->[6] =~ s/\D+//g;
+$row->[7] =~ s/\D+//g;
+$row->[8] =~ s/\D+//g;
+
 # execute your SQL statement
-$statement->execute($row->[0], $row->[1], $row->[2] || 0, $row->[3] || 0, $row->[4] || 0, $row->[5] || 0, $row->[6] || 0, $row->[7] || 0, $row->[8] || 0) or die $DBI::errstr;
+$statement->execute($row->[0], $row->[1] || 0, $row->[2] || 0, $row->[3] || 0, $row->[4] || 0, $row->[5] || 0, $row->[6] || 0, $row->[7] || 0, $row->[8] || 0) or die $DBI::errstr;
 $statement->finish();
 
 }
