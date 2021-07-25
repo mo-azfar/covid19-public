@@ -1,4 +1,6 @@
 # PERL - CSV TO MYSQL
+# Reading raw data in csv format from https://github.com/MoH-Malaysia/covid19-public and put into mysql
+# Purposely build for displaying data over [Metabase](https://www.metabase.com/)
 
 - :heavy_check_mark: cases_malaysia
 
