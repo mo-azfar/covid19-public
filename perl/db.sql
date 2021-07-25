@@ -14,4 +14,14 @@ cluster_detentionCentre int DEFAULT 0,
 cluster_workplace int DEFAULT 0
 );
 
+--create table
+CREATE TABLE IF NOT EXISTS cases_state (
+id bigint PRIMARY KEY,
+date DATE NOT NULL,
+state VARCHAR(255) NOT NULL,
+cases_new int NOT NULL
+);
+
+
+
 
