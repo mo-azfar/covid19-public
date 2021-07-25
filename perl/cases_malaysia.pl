@@ -4,16 +4,18 @@ use strict;
 use warnings;
 use PerlIO::http;
 use Text::CSV;
+use Config::IniFiles;
 use DBI;
 
 # MySQL database configurations and connection
-my $driver = "mysql"; 
-my $database = "covid19_public";
-my $dsn = "DBI:$driver:database=$database";
-my $userid = "covid19_update";
-my $password = "covid19_update123";
-my $dbh = DBI->connect($dsn, $userid, $password ) or die $DBI::errstr;
-
+my $cfg = Config::IniFiles -> new( -file => '/opt/covid19_public/database_config.ini' );
+my $dbdriver = $cfg -> val( 'DATABASE', 'DBDRIVER' );
+my $dbinst = $cfg -> val( 'DATABASE', 'DBINST' );
+my $dbuser = $cfg -> val( 'DATABASE', 'DBUSER' );
+my $dbpass = $cfg -> val( 'DATABASE', 'DBPASS' );
+ 
+my $dsn = "DBI:$dbdriver:database=$dbinst";
+my $dbh = DBI->connect($dsn, $dbuser, $dbpass ) or die "Database connection not made: $DBI::errstr";
 
 my $file = "https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/cases_malaysia.csv";
 open my $fh, "<:http", $file or die "$file: $!";
