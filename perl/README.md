@@ -5,7 +5,4 @@
 - :heavy_check_mark: cases_malaysia
 - :heavy_check_mark: cases_state
 
-
-[![Capture.png](https://i.postimg.cc/4NnZpPk4/Capture.png)](https://postimg.cc/9r3vhGQs)
-
 [![Web-capture-25-7-2021-202054-192-168-17-140.jpg](https://i.postimg.cc/MZgM131D/Web-capture-25-7-2021-202054-192-168-17-140.jpg)](https://postimg.cc/0rdysfWM)
