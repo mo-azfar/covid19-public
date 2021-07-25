@@ -6,5 +6,6 @@
 - :heavy_check_mark: cases_state
 
 
-[![Capture.png](https://i.postimg.cc/mZ7xdmyL/Capture.png)](https://postimg.cc/MXZrHbLN)
+[![Capture.png](https://i.postimg.cc/4NnZpPk4/Capture.png)](https://postimg.cc/9r3vhGQs)
 
+[![Capture2.png](https://i.postimg.cc/CLZTRKkz/Capture2.png)](https://postimg.cc/0bqH3Pts)
