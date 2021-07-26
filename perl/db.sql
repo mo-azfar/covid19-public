@@ -22,6 +22,18 @@ state VARCHAR(255) NOT NULL,
 cases_new int NOT NULL
 );
 
+--create table
+CREATE TABLE IF NOT EXISTS deaths_malaysia (
+date DATE PRIMARY KEY,
+deaths_new int NOT NULL
+);
 
+--create table
+CREATE TABLE IF NOT EXISTS deaths_state (
+id bigint PRIMARY KEY,
+date DATE NOT NULL,
+state VARCHAR(255) NOT NULL,
+deaths_new int NOT NULL
+);
 
 
