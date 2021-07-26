@@ -4,5 +4,8 @@
 
 - :heavy_check_mark: cases_malaysia
 - :heavy_check_mark: cases_state
+- :heavy_check_mark: clusters
+- :heavy_check_mark: deaths_malaysia
+- :heavy_check_mark: deaths_state
 
 [![Web-capture-25-7-2021-202054-192-168-17-140.jpg](https://i.postimg.cc/MZgM131D/Web-capture-25-7-2021-202054-192-168-17-140.jpg)](https://postimg.cc/0rdysfWM)
