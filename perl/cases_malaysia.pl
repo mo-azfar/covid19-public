@@ -11,10 +11,11 @@ use DBI;
 my $cfg = Config::IniFiles -> new( -file => '/opt/covid19_public/database_config.ini' );
 my $dbdriver = $cfg -> val( 'DATABASE', 'DBDRIVER' );
 my $dbinst = $cfg -> val( 'DATABASE', 'DBINST' );
+my $dbhost = $cfg -> val( 'DATABASE', 'DBHOST' );
 my $dbuser = $cfg -> val( 'DATABASE', 'DBUSER' );
 my $dbpass = $cfg -> val( 'DATABASE', 'DBPASS' );
  
-my $dsn = "DBI:$dbdriver:database=$dbinst";
+my $dsn = "DBI:$dbdriver:database=$dbinst;host=$dbhost";
 my $dbh = DBI->connect($dsn, $dbuser, $dbpass ) or die "Database connection not made: $DBI::errstr";
 
 my $file = "https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/cases_malaysia.csv";
