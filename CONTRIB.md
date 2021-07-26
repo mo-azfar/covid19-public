@@ -15,7 +15,10 @@ _Please submit a pull request here if you would like to request more data. Our t
    - the dates of testing and result of RT-PCR.
    - socio-demographic information, e.g. age, sex, ethnicity, comorbidities.
    - clinical stage of COVID-19/severity.
-
+8) Actual postiive test numbers - numbers might be delayed by a few days
+  
+   
+   
 ### Healthcare
 
 1)
@@ -33,6 +36,8 @@ _Please submit a pull request here if you would like to request more data. Our t
 ### Mobility and Contact Tracing
 
 1) [added] ~~MySejahtera checkins by state~~
+2) Population age group of MySejahtera check-ins, specified on by-state level
+3) Check-in locations categorized (e.g. supermarkets, hospitals) by state
 
 
 ---
