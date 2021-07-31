@@ -2,9 +2,7 @@
 ###### Reading raw data from https://github.com/MoH-Malaysia/covid19-public and put into mysql
 ###### Purposely build for displaying data over [Metabase](https://www.metabase.com/) / any others BI tools
 
-Used CPAN Module
-
-|				|					|
+| 		Used CPAN Module			|
 | ------------- | ----------------- |
 | DBI			| Text::CSV			|
 | PerlIO::http	| Config::IniFiles	|
