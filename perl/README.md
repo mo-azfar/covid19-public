@@ -4,6 +4,8 @@
 
 Used CPAN Module
 
+|				|					|
+| ------------- | ----------------- |
 | DBI			| Text::CSV			|
 | PerlIO::http	| Config::IniFiles	|
 
