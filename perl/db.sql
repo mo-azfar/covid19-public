@@ -32,7 +32,8 @@ Selangor INT,
 Terengganu INT,
 WPKualaLumpur INT, 
 WPLabuan INT, 
-WPPutrajaya INT
+WPPutrajaya INT,
+Total INT
 );
 
 --create table clusters
@@ -77,5 +78,6 @@ Selangor INT,
 Terengganu INT,
 WPKualaLumpur INT, 
 WPLabuan INT, 
-WPPutrajaya INT
+WPPutrajaya INT,
+Total INT
 );
