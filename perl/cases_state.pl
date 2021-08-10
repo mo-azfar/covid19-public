@@ -31,23 +31,21 @@ my $header = $csv->getline ($fh);  #skip header display
 #open DB connection
 my $dsn = "DBI:$dbdriver:database=$dbinst;host=$dbhost";
 my $dbh = DBI->connect($dsn, $dbuser, $dbpass ) or die "Database connection not made: $DBI::errstr";
-
-my $id=0;
+  
 while (my $row = $csv->getline ($fh))
 {
-	#print "@$row\n";
-	$id++;
-	my $sql = "INSERT INTO cases_state (id, date, state, cases_new ) 
-				VALUES (?, ?, ?, ?)
+	$row->[1] =~ s/[^a-zA-Z]+//g; #state
+	$row->[2] =~ s/\D+//g; #cases
+		
+	my $sql = "INSERT INTO cases_state ( date, $row->[1] ) 
+				VALUES (?, ?)
 				ON DUPLICATE KEY UPDATE 
-				date = VALUES(date), state = VALUES(state), cases_new = VALUES(cases_new)";
+				$row->[1] = $row->[2]";
 				
 	my $statement = $dbh->prepare($sql);
 	
-	$row->[2] =~ s/\D+//g;
-	
 	# execute your SQL statement
-	$statement->execute($id, $row->[0], $row->[1], $row->[2] || 0) or die $DBI::errstr;
+	$statement->execute( $row->[0], $row->[2] ) or die $DBI::errstr;
 	$statement->finish();
 }
 

@@ -1,7 +1,7 @@
 -- create database
 CREATE DATABASE IF NOT EXISTS covid19_public DEFAULT CHARACTER SET utf8;
 
---create table
+--create table cases_malaysia
 CREATE TABLE IF NOT EXISTS cases_malaysia (
 date DATE PRIMARY KEY,
 cases_new int NOT NULL,
@@ -14,15 +14,28 @@ cluster_detentionCentre int DEFAULT 0,
 cluster_workplace int DEFAULT 0
 );
 
---create table
+--create table cases_state
 CREATE TABLE IF NOT EXISTS cases_state (
-id bigint PRIMARY KEY,
-date DATE NOT NULL,
-state VARCHAR(255) NOT NULL,
-cases_new int NOT NULL
+date DATE NOT NULL PRIMARY KEY, 
+Johor INT, 
+Kedah INT, 
+Kelantan INT, 
+Melaka INT, 
+NegeriSembilan INT, 
+Pahang INT, 
+Perak INT, 
+Perlis INT, 
+PulauPinang INT, 
+Sabah INT, 
+Sarawak INT, 
+Selangor INT, 
+Terengganu INT,
+WPKualaLumpur INT, 
+WPLabuan INT, 
+WPPutrajaya INT
 );
 
---create table
+--create table clusters
 CREATE TABLE IF NOT EXISTS clusters (
 cluster VARCHAR(255) UNIQUE NOT NULL,
 state LONGTEXT NOT NULL,
@@ -40,18 +53,29 @@ deaths int NOT NULL,
 recovered int NOT NULL
 );
 
---create table
+--create table deaths_malaysia
 CREATE TABLE IF NOT EXISTS deaths_malaysia (
 date DATE PRIMARY KEY,
 deaths_new int NOT NULL
 );
 
---create table
+--create table deaths_state
 CREATE TABLE IF NOT EXISTS deaths_state (
-id bigint PRIMARY KEY,
-date DATE NOT NULL,
-state VARCHAR(255) NOT NULL,
-deaths_new int NOT NULL
+date DATE NOT NULL PRIMARY KEY, 
+Johor INT, 
+Kedah INT, 
+Kelantan INT, 
+Melaka INT, 
+NegeriSembilan INT, 
+Pahang INT, 
+Perak INT, 
+Perlis INT, 
+PulauPinang INT, 
+Sabah INT, 
+Sarawak INT, 
+Selangor INT, 
+Terengganu INT,
+WPKualaLumpur INT, 
+WPLabuan INT, 
+WPPutrajaya INT
 );
-
-
